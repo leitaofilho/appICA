@@ -1,0 +1,28 @@
+2024-10-24 16:45:47,722 - INFO - [MainThread] Dispositivos disponíveis:
+> 0 BlackHole 2ch, Core Audio (2 in, 2 out)
+  1 Microfone (MacBook Pro), Core Audio (1 in, 0 out)
+  2 Alto-falantes (MacBook Pro), Core Audio (0 in, 2 out)
+< 3 Dispositivo com Saída Múltipla, Core Audio (0 in, 2 out)
+2024-10-24 16:45:47,722 - INFO - [MainThread] BlackHole encontrado no índice 0
+2024-10-24 16:45:47,722 - ERROR - [MainThread] Erro na inicialização: 'AudioProcessor' object has no attribute '_verify_audio_input'
+Traceback (most recent call last):
+  File "/Users/aiacontext/PycharmProjects/appICA/main.py", line 79, in _initialize_system
+    self._setup_audio_device()
+  File "/Users/aiacontext/PycharmProjects/appICA/main.py", line 280, in _setup_audio_device
+    self._verify_audio_input(blackhole_idx)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AudioProcessor' object has no attribute '_verify_audio_input'
+2024-10-24 16:45:47,723 - ERROR - [MainThread] Erro fatal: 'AudioProcessor' object has no attribute '_verify_audio_input'
+Traceback (most recent call last):
+  File "/Users/aiacontext/PycharmProjects/appICA/main.py", line 386, in main
+    processor = AudioProcessor(config)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aiacontext/PycharmProjects/appICA/main.py", line 74, in __init__
+    self._initialize_system()
+  File "/Users/aiacontext/PycharmProjects/appICA/main.py", line 79, in _initialize_system
+    self._setup_audio_device()
+  File "/Users/aiacontext/PycharmProjects/appICA/main.py", line 280, in _setup_audio_device
+    self._verify_audio_input(blackhole_idx)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AudioProcessor' object has no attribute '_verify_audio_input'
+2024-10-24 16:45:47,724 - INFO - [MainThread] Programa finalizado
